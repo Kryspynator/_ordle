@@ -3,6 +3,9 @@ import { WordleCellState } from "../WordleCell/WordleCellState";
 import "./App.scss";
 
 export const App = () => {
+    const numberOfLetters = 5;
+    const numberOfBoards = 2;
+
     return (
         <>
             <div
@@ -11,41 +14,16 @@ export const App = () => {
                     gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr",
                 }}
             >
-                <WordleCell state={WordleCellState.Incorrect} cellText="B" />
-                <WordleCell state={WordleCellState.Incorrect} cellText="A" />
-                <WordleCell state={WordleCellState.Incorrect} cellText="L" />
-                <WordleCell state={WordleCellState.Incorrect} cellText="L" />
-                <WordleCell state={WordleCellState.Incorrect} cellText="S" />
-                <WordleCell state={WordleCellState.Incorrect} cellText="B" />
-                <WordleCell state={WordleCellState.Incorrect} cellText="I" />
-                <WordleCell state={WordleCellState.Incorrect} cellText="T" />
-                <WordleCell state={WordleCellState.HalfCorrect} cellText="C" />
-                <WordleCell state={WordleCellState.Correct} cellText="H" />
-                <WordleCell state={WordleCellState.Default} cellText="" />
-                <WordleCell state={WordleCellState.Default} cellText="" />
-                <WordleCell state={WordleCellState.Default} cellText="" />
-                <WordleCell state={WordleCellState.Default} cellText="" />
-                <WordleCell state={WordleCellState.Default} cellText="" />
-                <WordleCell state={WordleCellState.Default} cellText="" />
-                <WordleCell state={WordleCellState.Default} cellText="" />
-                <WordleCell state={WordleCellState.Default} cellText="" />
-                <WordleCell state={WordleCellState.Default} cellText="" />
-                <WordleCell state={WordleCellState.Default} cellText="" />
-                <WordleCell state={WordleCellState.Default} cellText="" />
-                <WordleCell state={WordleCellState.Default} cellText="" />
-                <WordleCell state={WordleCellState.Default} cellText="" />
-                <WordleCell state={WordleCellState.Default} cellText="" />
-                <WordleCell state={WordleCellState.Default} cellText="" />
-                <WordleCell state={WordleCellState.Default} cellText="" />
-                <WordleCell state={WordleCellState.Default} cellText="" />
-                <WordleCell state={WordleCellState.Default} cellText="" />
-                <WordleCell state={WordleCellState.Default} cellText="" />
-                <WordleCell state={WordleCellState.Default} cellText="" />
-                <WordleCell state={WordleCellState.Default} cellText="" />
-                <WordleCell state={WordleCellState.Default} cellText="" />
-                <WordleCell state={WordleCellState.Default} cellText="" />
-                <WordleCell state={WordleCellState.Default} cellText="" />
-                <WordleCell state={WordleCellState.Default} cellText="" />
+                {Array()
+                    .fill(numberOfBoards + numberOfLetters)
+                    .map((element) => {
+                        return (
+                            <WordleCell
+                                state={WordleCellState.Default}
+                                text=""
+                            />
+                        );
+                    })}
             </div>
         </>
     );

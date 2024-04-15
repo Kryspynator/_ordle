@@ -3,7 +3,7 @@ import "./WordleCell.scss";
 
 interface WordleCellProps {
     state: WordleCellState;
-    cellText: string;
+    text: string;
 }
 
 export const WordleCell = ({ state: cellState, cellText }: WordleCellProps) => {
