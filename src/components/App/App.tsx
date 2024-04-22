@@ -18,15 +18,13 @@ export const App = () => {
         );
     });
     return (
-        <>
-            <div
-                style={{
-                    display: "grid",
-                    gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr",
-                }}
-            >
-                {cells}
-            </div>
-        </>
+        <div
+            style={{
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr",
+            }}
+        >
+            {cells}
+        </div>
     );
 };
