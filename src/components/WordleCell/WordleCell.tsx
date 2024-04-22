@@ -6,6 +6,6 @@ interface WordleCellProps {
     text: string;
 }
 
-export const WordleCell = ({ state: cellState, cellText }: WordleCellProps) => {
-    return <div className={"cell " + cellState}>{cellText}</div>;
+export const WordleCell = ({ state, text }: WordleCellProps) => {
+    return <div className={"cell " + state}>{text}</div>;
 };

@@ -5,7 +5,18 @@ import "./App.scss";
 export const App = () => {
     const numberOfLetters = 5;
     const numberOfBoards = 2;
-
+    const cellsEmpty = new Array(
+        numberOfLetters * (numberOfBoards + numberOfLetters)
+    );
+    const cells = cellsEmpty.map((_, index) => {
+        return (
+            <WordleCell
+                key={index}
+                state={WordleCellState.HalfCorrect}
+                text="H"
+            />
+        );
+    });
     return (
         <>
             <div
@@ -14,16 +25,7 @@ export const App = () => {
                     gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr",
                 }}
             >
-                {Array()
-                    .fill(numberOfBoards + numberOfLetters)
-                    .map((element) => {
-                        return (
-                            <WordleCell
-                                state={WordleCellState.Default}
-                                text=""
-                            />
-                        );
-                    })}
+                {cells}
             </div>
         </>
     );
