@@ -1,5 +1,4 @@
 .cell {
-    border-radius: 7px;
     aspect-ratio: 1 / 1;
     height: 50px;
     text-align: center;
@@ -10,8 +9,11 @@
     font-weight: bold;
     text-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
 
+    border-radius: 10px;
+    background: #292929;
+    box-shadow: 5px 5px 24px #232323, -5px -5px 24px #2f2f2f;
+
     &.default {
-        border-color: gray;
     }
     &.correct {
         background-color: rgb(50, 200, 50);

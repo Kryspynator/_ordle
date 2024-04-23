@@ -1,0 +1,5 @@
+.board {
+    --board-size: 5;
+    display: grid;
+    grid-template-columns: repeat(var(--board-size), 1fr);
+}
