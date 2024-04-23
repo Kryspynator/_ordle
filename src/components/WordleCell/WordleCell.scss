@@ -1,19 +1,19 @@
 .cell {
     aspect-ratio: 1 / 1;
-    height: 50px;
+    height: 70px;
     text-align: center;
     align-content: center;
-    margin: 5px;
+    margin: 7px;
     font-size: 2rem;
-    border: 4px transparent solid;
     font-weight: bold;
+    border: 7px solid transparent;
     text-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
 
     border-radius: 10px;
-    background: #292929;
-    box-shadow: 5px 5px 24px #232323, -5px -5px 24px #2f2f2f;
+    background: rgb(41, 41, 41);
 
     &.default {
+        border-color: rgb(115, 115, 115);
     }
     &.correct {
         background-color: rgb(50, 200, 50);
@@ -22,6 +22,6 @@
         background-color: rgb(192, 180, 55);
     }
     &.incorrect {
-        background-color: rgb(113, 113, 113);
+        background-color: rgb(82, 82, 82);
     }
 }
